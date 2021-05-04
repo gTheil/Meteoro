@@ -26,8 +26,7 @@ public class Player : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        rb.AddForce(new Vector3(moveHorizontal, moveVertical, 0f) * speed);
-        rb.AddForce((Vector3.forward * gravity));
+        rb.AddForce(new Vector3(moveHorizontal * speed, moveVertical * speed, gravity));
 
 
     }

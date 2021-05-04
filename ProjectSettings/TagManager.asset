@@ -11,6 +11,7 @@ TagManager:
   - AstronautH
   - AstronautV
   - Earth
+  - Planet
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - 
   - Wall
-  - 
+  - Planet
   - 
   - 
   - 

@@ -16,7 +16,7 @@ public class Obstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if(gameObject.CompareTag("Rock") || gameObject.CompareTag("Earth"))
+		if(gameObject.CompareTag("Rock") || gameObject.CompareTag("Earth") || gameObject.CompareTag("Planet"))
 		{
 			transform.Rotate(new Vector3(15, 30, 45)* Time.deltaTime * speed);
 		}
@@ -26,13 +26,13 @@ public class Obstacles : MonoBehaviour
 		{
 			transform.position = transform.position + new Vector3((1f * facing) * speed * Time.deltaTime, 0.0f, 0.0f);
 
-			LayerMask mask = LayerMask.GetMask("Wall"); //cria uma mask na camada Parede aplicada às paredes
-
-			if (Physics.Raycast(transform.position, Vector3.right, .5f, mask))
+			LayerMask mask1 = LayerMask.GetMask("Wall"); //cria uma mask na camada Parede aplicada às paredes
+			LayerMask mask2 = LayerMask.GetMask("Planet");
+			if (Physics.Raycast(transform.position, Vector3.right, .5f, mask1) || Physics.Raycast(transform.position, Vector3.right, .5f, mask2))
 			{
 				facing = -1; //trocando de direção
 			}
-			else if (Physics.Raycast(transform.position, Vector3.left, .5f, mask))
+			else if (Physics.Raycast(transform.position, Vector3.left, .5f, mask1) || Physics.Raycast(transform.position, Vector3.left, .5f, mask2))
 			{
 				facing = 1;
 			}
@@ -43,13 +43,14 @@ public class Obstacles : MonoBehaviour
 		{
 			transform.position = transform.position + new Vector3(0.0f, (1f * facing) * speed * Time.deltaTime, 0.0f);
 
-			LayerMask mask = LayerMask.GetMask("Wall"); //cria uma mask na camada Parede aplicada às paredes
-
-			if (Physics.Raycast(transform.position, Vector3.up, .5f, mask))
+			LayerMask mask1 = LayerMask.GetMask("Wall"); //cria uma mask na camada Parede aplicada às paredes
+			LayerMask mask2 = LayerMask.GetMask("Planet");
+			
+			if (Physics.Raycast(transform.position, Vector3.up, .5f, mask1) || Physics.Raycast(transform.position, Vector3.up, .5f, mask2))
 			{
 				facing = -1; //trocando de direção
 			}
-			else if (Physics.Raycast(transform.position, Vector3.down, .5f, mask))
+			else if (Physics.Raycast(transform.position, Vector3.down, .5f, mask1) || Physics.Raycast(transform.position, Vector3.down, .5f, mask2))
 			{
 				facing = 1;
 			}

@@ -1,25 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public Button levelButton;
-    public Button creditsButton;
-    public Button quitButton;
-    public Button backButton;
-    public Button retryButton;
+    public LevelManager lm;
 
-    // Start is called before the first frame update
-    void Start()
+    public void LevelButton()
     {
-        
+        SceneManager.LoadScene("LevelSelect");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EasyButton()
     {
-        
+        lm.stage = 1;
+        SceneManager.LoadScene("Game");
     }
+
+    public void MediumButton()
+    {
+        lm.stage = 2;
+        SceneManager.LoadScene("Game");
+    }
+
+    public void HardButton()
+    {
+        lm.stage = 3;
+        SceneManager.LoadScene("Game");
+    }
+
+    public void CreditsButton()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void MenuButton()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
+
 }

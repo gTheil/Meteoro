@@ -6,9 +6,9 @@ public class Obstacles : MonoBehaviour
 {
 	public float speed;
     public float facing; //define a direção do X, trocando o valor de movimento para positivo ou negativo
-	
-    // Start is called before the first frame update
-    void Start()
+
+	// Start is called before the first frame update
+	void Start()
     {
         
     }

@@ -56,7 +56,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		timer += Time.deltaTime;
+        transform.Rotate(new Vector3(5, 10, 15) * Time.deltaTime);
+
+        timer += Time.deltaTime;
 		if (timer >= 1)
 		{
 			segundos++;
@@ -89,11 +91,23 @@ public class Player : MonoBehaviour
     {
 		if(other.gameObject.CompareTag("Earth"))
 		{
-			Debug.Log("Explode tudo");
+            AudioSource otherAudio = other.gameObject.GetComponent<AudioSource>();
+            otherAudio.Play();
+            Debug.Log("Explode tudo");
             tempoClear.text = tempo.text;
             velocidadeClear.text = velocidade.text;
             Time.timeScale = 0;
             clear.SetActive(true);
         }
 	}
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Rock") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("ShipH") || other.gameObject.CompareTag("ShipV") 
+            || other.gameObject.CompareTag("AstronautH") || other.gameObject.CompareTag("AstronautV") || other.gameObject.CompareTag("Planet"))
+        {
+            AudioSource otherAudio = other.gameObject.GetComponent<AudioSource>();
+            otherAudio.Play();
+        }
+    }
 }

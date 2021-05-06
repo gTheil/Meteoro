@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float gravity;
     public GameObject warp1, warp2, warp3;
     public GameObject camera;
+    public GameObject clear;
 
     private Rigidbody rb;
     private LevelManager lm;
@@ -19,10 +20,13 @@ public class Player : MonoBehaviour
 	public float velocidadeRb;
 	public Text tempo;
 	public Text velocidade;
+    public Text tempoClear;
+    public Text velocidadeClear;
 
     void Awake()
     {
-		
+        
+        clear.SetActive(false);
         lm = GameObject.Find("LevelManager").GetComponent<LevelManager>();
 
         if (lm.stage == 1)
@@ -45,6 +49,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -65,7 +70,7 @@ public class Player : MonoBehaviour
 		}
            
         tempo.text = "Tempo: "+minutos+":"+segundos;
-		velocidade.text = "Velocidade: "+velocidadeRb.ToString("F");
+		velocidade.text = "Velocidade: "+velocidadeRb.ToString("F") + " km/h";
         
     }
 
@@ -85,6 +90,10 @@ public class Player : MonoBehaviour
 		if(other.gameObject.CompareTag("Earth"))
 		{
 			Debug.Log("Explode tudo");
-		}
+            tempoClear.text = tempo.text;
+            velocidadeClear.text = velocidade.text;
+            Time.timeScale = 0;
+            clear.SetActive(true);
+        }
 	}
 }

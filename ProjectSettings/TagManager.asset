@@ -12,6 +12,7 @@ TagManager:
   - AstronautV
   - Earth
   - Planet
+  - Manager
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,11 @@ public class Menu : MonoBehaviour
 {
     public LevelManager lm;
 
+    void Start()
+    {
+        lm = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+    }
+
     public void LevelButton()
     {
         SceneManager.LoadScene("LevelSelect");
@@ -43,6 +48,11 @@ public class Menu : MonoBehaviour
     public void QuitButton()
     {
         Application.Quit();
+    }
+
+    public void RetryButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

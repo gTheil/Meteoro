@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -11,9 +12,17 @@ public class Player : MonoBehaviour
 
     private Rigidbody rb;
     private LevelManager lm;
+	
+	public int segundos;
+    public int minutos;
+	public float timer;
+	public float velocidadeRb;
+	public Text tempo;
+	public Text velocidade;
 
     void Awake()
     {
+		
         lm = GameObject.Find("LevelManager").GetComponent<LevelManager>();
 
         if (lm.stage == 1)
@@ -42,6 +51,21 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		timer += Time.deltaTime;
+		if (timer >= 1)
+		{
+			segundos++;
+            
+            if (segundos >= 60)
+            {
+				segundos = 0;
+                minutos++;
+            }
+			timer = 0;
+		}
+           
+        tempo.text = "Tempo: "+minutos+":"+segundos;
+		velocidade.text = "Velocidade: "+velocidadeRb.ToString("F");
         
     }
 
@@ -51,7 +75,16 @@ public class Player : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
 
         rb.AddForce(new Vector3(moveHorizontal * speed, moveVertical * speed, gravity));
-
+		
+		velocidadeRb = GetComponent<Rigidbody>().velocity.z;
 
     }
+	
+	private void OnTriggerEnter(Collider other)
+    {
+		if(other.gameObject.CompareTag("Earth"))
+		{
+			Debug.Log("Explode tudo");
+		}
+	}
 }

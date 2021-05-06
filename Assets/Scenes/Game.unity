@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  gravity: 1
+  gravity: 7
   warp1: {fileID: 1900411661}
   warp2: {fileID: 428983499}
   warp3: {fileID: 1347673558}

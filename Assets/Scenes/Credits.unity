@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -631,7 +631,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -642,7 +642,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CREDITOS
+  m_Text: "CR\xC9DITOS\n\nMobile Astre Pack vol.1 by Works For Fun - https://assetstore.unity.com/packages/3d/environments/mobile-astre-pack-vol-1-68173\n\nStylized
+    Planet-Pack Full by One Potato Kingdom - https://assetstore.unity.com/packages/3d/environments/stylized-planet-pack-full-148233\n\nStylized
+    Astronaut by PULSAR BYTES - https://assetstore.unity.com/packages/3d/characters/humanoids/sci-fi/stylized-astronaut-114298\n\nStylized
+    Earth by Ryan Zehm - https://assetstore.unity.com/packages/3d/environments/landscapes/stylized-earth-94673\n\nLowPoly
+    Space Cars by Digi Smile Limited - https://assetstore.unity.com/packages/3d/vehicles/air/lowpoly-space-cars-149383\n\nMenu
+    Selection Click by NenadSimic - https://opengameart.org/content/menu-selection-click\n\n
+    Space Dimensions (Tecnno Version) by Matthew Pablo\n\nMuffled Distant Explosion
+    by NenadSimic - https://opengameart.org/content/muffled-distant-explosion\n\nROCK_BREAKING
+    by Blender Foundation - https://opengameart.org/content/rockbreaking\n"
 --- !u!222 &2097471612
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -756,7 +764,7 @@ PrefabInstance:
     - target: {fileID: 7685931903124397453, guid: a48b0da83ca675e4dad542c4cc4e33ba,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -271
+      value: -302
       objectReference: {fileID: 0}
     - target: {fileID: 7685931903124397453, guid: a48b0da83ca675e4dad542c4cc4e33ba,
         type: 3}

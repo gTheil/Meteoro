@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -11013,7 +11013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 249}
+  m_AnchoredPosition: {x: 0, y: 173}
   m_SizeDelta: {x: 578.7178, y: 202.92526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273033192
@@ -34412,7 +34412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 52}
+  m_AnchoredPosition: {x: 0, y: 13}
   m_SizeDelta: {x: 581.20886, y: 78.64746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1098700989
@@ -55962,7 +55962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00001335144, y: -19}
+  m_AnchoredPosition: {x: 0.00001335144, y: -59}
   m_SizeDelta: {x: 581.21204, y: 62.245667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756756221

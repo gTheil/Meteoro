@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 503, y: -152}
+  m_AnchoredPosition: {x: 388, y: -152}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &52020417
@@ -365,7 +365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: -152}
+  m_AnchoredPosition: {x: -392.00003, y: -152}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279300082
@@ -709,7 +709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: -152}
+  m_AnchoredPosition: {x: -2.4000244, y: -152}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528419252
@@ -1078,12 +1078,12 @@ PrefabInstance:
     - target: {fileID: 7685931903124397453, guid: a48b0da83ca675e4dad542c4cc4e33ba,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19
+      value: -2.4000244
       objectReference: {fileID: 0}
     - target: {fileID: 7685931903124397453, guid: a48b0da83ca675e4dad542c4cc4e33ba,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -345
+      value: -289.7
       objectReference: {fileID: 0}
     - target: {fileID: 7685931903124397453, guid: a48b0da83ca675e4dad542c4cc4e33ba,
         type: 3}
@@ -1147,7 +1147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.8, y: 214.8}
+  m_AnchoredPosition: {x: -0.8, y: 111}
   m_SizeDelta: {x: 948.45874, y: 190.44989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217689088
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
